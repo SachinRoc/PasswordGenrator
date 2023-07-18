@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
     <div class="container">
        <h1>Password Generator</h1>
 
-       <div clss="display-container">
+       <div class="display-container">
           <input readonly placeholder="Password" class="display" data-passwordDisplay>
-          <button data-copy>
-            <span data-copyMsg></span>
+          <button class="copyBtn" data-copy>
+            <span class ="tooltip" data-copyMsg></span>
               <img src="./assest/copy.svg" alt="copy" width="23" height="23">
           </button>         
 
@@ -29,22 +34,22 @@
            <input type="range" min="1" max="20" class="slider" data-lengthSlider>
 
            <!--check boxes-->
-           <div>
+           <div class ="check">
             <input type="checkbox" id="uppercase">
             <label for ="uppercase">Includes Uppercase letters</label>
            </div>
 
-           <div>
+           <div class ="check">
             <input type="checkbox" id="lowercase">
             <label for ="lowercase">Include Lowercase Letters</label>
            </div>
             
-           <div>
+           <div class ="check">
             <input type="checkbox" id="numbers">
             <label for ="numbers">Include Numbers</label>
            </div>
 
-           <div>
+           <div class ="check">
             <input type="checkbox" id="symbols">
             <label for ="symbols">Include Symbols</label>
            </div>
@@ -52,7 +57,7 @@
            <!--strength section-->
            <div class="strength-container">
             <p>Strength</p>
-             <div data-indicator></div>
+             <div class ="indicator" data-indicator></div>
            </div>
 
            <!--generate password Button-->
